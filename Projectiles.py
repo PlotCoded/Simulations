@@ -27,12 +27,11 @@ while running:
 
 	screen.fill((0,0,0))
 
-
 	if VerticalPosition <= ground: 
 		pygame.draw.circle(screen, (255,255,255), (HorizontalPosition,VerticalPosition), 8, 8)
 		HorizontalPosition = time * (InitialVelocity * math.cos(Radians)) + 300 # Position (Distance) = Incrementation (px movement per frame) (Time) * Velocity
 		VerticalPosition = ((time * InitialVelocity * math.sin(Radians)) + 0.5 * (Acceleration) * (time**2)) + ground # S = Ut + (1/2)(g)(t^2) + C
-		time+=0.0356 # = 1.9047, y = 4.32
+		time+=0.0356
 
 		# Testing
 		print(f"Rate of change of vertical displacement or velocity: {(((time+0.02) * InitialVelocity * math.sin(Radians)) + 0.5 * (Acceleration) * ((time+0.02)**2) + 100)- ((time * InitialVelocity * math.sin(Radians) + 0.5 * (Acceleration) * (time**2) + 100))} at time = {time}")
@@ -51,7 +50,8 @@ while running:
 
 		running = False #Testing
 
-	# Drawing the ground
+	# Displaying real world details like time, height, angle, etc
+
 	pygame.draw.line(screen, (255,255,255), (0,ground+8), (dimensions[0][0], ground+8))
 
 	pygame.display.update()
