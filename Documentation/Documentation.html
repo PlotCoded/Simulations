@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.centerHeader {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 class="centerHeader"><u>Simulations Documentation</u> </h1>
+	<p>This is a documentation for the simulations project stretching mainly two fields of physics and maths.</p>
+	<p>This shows all the details of the project from what a file does to what a particular variable means. Everything here is documented. Every detail.</p>
+	
+	<h3>Equillibrum.py</h3>
+	<div>
+		<code>import pygame, math</code><br><br>
+
+		<code>pygame.init()</code><br>
+
+		<code>dimensions = pygame.display.get_desktop_sizes()</code><br>
+		<code>screen = pygame.display.set_mode((dimensions[0][0], dimensions[0][1]-60))</code><br>
+		<code>pygame.display.set_caption("Projectile")</code><br><br>
+
+		<code>running = True</code><br><br>
+
+		<code>vectors = {1: 180, 1: 180, 1:180} #Magnitude: Direction</code><br><br>
+
+		<code># Positions</code><br>
+		<code>HorVects = dimensions[0][0]/2</code><br>
+		<code>VerVects = dimensions[0][1]/2-30</code><br><br>
+
+		<code># Velicities</code><br>
+		<code>HorVel = 0</code><br>
+		<code>VerVel = 0</code><br>
+
+		<code># Scaling</code><br>
+		<code>scale = 4</code><br><br>
+	</div>
+</body>
+
+</html>
